@@ -1,0 +1,260 @@
+/* Calc.css — стиль Dracula Theme */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #282a36;
+  height: 100%;
+  color: #f8f8f2;
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+/* Main content */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #18181B;
+  overflow-y: auto; 
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+}
+
+
+/* Sidebar */
+.sidebar {
+  position: relative;
+  top: 0;
+  left: 0px;
+  width: 260px;
+  height: 100%;
+  background-color: #27272A;
+  padding: 12px;
+  border-right: 1px solid #525252;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.btn-showSidebar{
+    display: none;
+}
+
+@media (max-width: 1023px) {
+  .content{
+    flex: 1;
+    padding: 10px;
+    background-color: #18181B;
+    overflow-y: auto; 
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .sidebar{
+    position: absolute;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: #27272A;
+    padding: 12px;
+    border-right: 1px solid #525252;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 10;
+
+  }
+  .sidebar.show{
+    left: 0;
+  }
+  .btn-showSidebar{
+    display: flex;
+    position: absolute;
+    background-color: #9655f2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 20;
+  }
+}
+
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #9655f2;
+  color: #282a36;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.button:hover {
+  background-color: #d6acff;
+}
+
+/* Folder/Note list */
+.folder-list {
+  list-style: none;
+  padding-left: 12px;
+}
+
+.folder-item {
+  margin-bottom: 6px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.folder-item div {
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  gap: 5px;
+}
+
+.folder-item div:hover {
+  background-color: #18181B;
+}
+
+.selected-note {
+  background-color: #0C0A09 !important;
+  font-weight: bold;
+  color: #282a36;
+}
+
+
+.note-editor {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  padding: 30px 0;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  background-color: #18181B ;
+  color: #f8f8f2;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+.main-content{
+  background-color: #18181B;
+  width: 100%;
+  height: 100%;
+  padding: 50px 250px;
+}
+
+.noteName{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+@media (max-width: 1600px) {
+  .main-content {
+    padding: 50px 200px;
+  }
+}
+@media (max-width: 1500px) {
+  .main-content {
+    padding: 50px 150px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .main-content {
+    padding: 50px 100px;
+  }
+}
+
+/* Меньше 1024px */
+@media (max-width: 1023px) {
+  .main-content {
+    padding: 50px 100px;
+  }
+  .noteName{
+    font-size: 36px;
+  }
+}
+
+/* Меньше 768px */
+@media (max-width: 767px) {
+  .main-content {
+    padding: 50px 50px;
+  }
+  .noteName{
+    font-size: 28px;
+  }
+  .note-editor{
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .main-content {
+    padding: 50px 20px;
+  }
+  .noteName{
+    font-size: 24px;
+  }
+}
+
+
+
+.placeholder {
+  color: #bd93f9;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+  padding: 100px 10px;
+}
+@media (max-width: 767px) {
+  .placeholder {
+    font-size: 14px;
+  }
+}
+
+/* Context menu */
+.context-menu {
+  position: absolute;
+  background-color: #18181B;
+  border: 1px solid #6272a4;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 4px 0;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.context-menu button {
+  width: 100%;
+  padding: 8px 14px;
+  background: none;
+  border: none;
+  color: #f8f8f2;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.context-menu button:hover {
+  background-color: #18181B;
+}
