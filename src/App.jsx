@@ -5,7 +5,7 @@ export default function ObsidianClone() {
   const [folders, setFolders] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0, targetPath: null });
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(null)
   const sidebarRef = useRef(null)
 
   useEffect(()=>{
