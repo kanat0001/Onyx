@@ -257,8 +257,8 @@ function ListItem({ folders, path, createFolder, addNote, renameItem, deleteItem
   className="icon"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  width="16"
-  height="16"
+  width="20"
+  height="20"
   fill="#f8f8f2"
 >
   <path d="M381,236H276V131c0-11-9-20-20-20s-20,9-20,20v105H131c-11,0-20,9-20,20s9,20,20,20h105v105c0,11,9,20,20,20

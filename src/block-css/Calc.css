@@ -259,9 +259,8 @@ body, html {
   background-color: black;
   border: none;
   background-color: #27272A;
-  width: 20px;
-  height: 20px;
-  padding-left: 5px;
+  width: 30px;
+  height: auto;
 }
 .btn-plus:hover{
   background-color: #18181B;
